@@ -1,0 +1,75 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+
+    @include responsive(tab-land) {
+        font-size: 56.25%;
+    }
+
+    @include responsive(tab-port) {
+        font-size: 50%;
+    }
+
+    @include responsive(big-desktop) {
+        font-size: 75%;
+    }
+
+
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+body {
+    box-sizing: border-box;
+    padding: 3rem;
+
+    @include responsive(tab-port) {
+        padding: 0;
+    }
+}
+
+.row {
+    max-width: 184rem;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    padding: 8rem;
+
+    &:not(:last-child) {
+        flex: 0 0 100%;
+        margin: auto;
+        margin-bottom: 8rem;
+
+        @include responsive(tab-port) {
+            margin-bottom: 6rem;
+        }
+    }
+
+    @include responsive(tab-port) {
+        max-width: 50rem;
+        padding: 0 3rem;
+    }
+
+    &::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+
+.col {
+    flex-direction: column;
+}

@@ -1,0 +1,17 @@
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-grey-dark-3;
+    padding: 6rem 0;
+
+    &__copyright {
+
+        font-size: 2.5rem;
+        margin: auto;
+
+        @include responsive(tab-land) {
+            font-size: 2rem;
+        }
+    }
+}

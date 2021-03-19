@@ -1,0 +1,48 @@
+.dev__list {
+
+    list-style: none;
+    margin: auto;
+    margin-bottom: 4rem;
+    font-size: 1.6rem;
+    -moz-column-count: 2;
+    -moz-column-gap: 4rem;
+    -moz-column-rule: 1px solid $color-grey-light-2;
+    column-count: 2;
+    column-gap: 4rem;
+    column-rule: 2px solid $color-grey-light-2;
+
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+
+    &__item {
+        margin-left: 2rem;
+        margin-bottom: .7rem;
+
+        &::before {
+            content: "";
+            display: inline-block;
+            height: 1rem;
+            width: 1rem;
+            margin-right: .2rem;
+            background-image: url(../img/chevron-thin-right.svg);
+            background-size: cover;
+            transition: all .2s;
+
+            @supports (-webkit-mask-image: url()) or (mask-image: url()) {
+                background-color: $color-primary;
+                -webkit-mask-image: url(../img/chevron-thin-right.svg);
+                -webkit-mask-size: cover;
+                mask-image: url(../img/chevron-thin-right.svg);
+                mask-size: cover;
+                background-image: none;
+            }
+        }
+
+        &:hover::before {
+            transform: rotate(180deg);
+        }
+
+    }
+}

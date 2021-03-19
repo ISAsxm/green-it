@@ -1,0 +1,54 @@
+.section-about {
+    background-color: $color-grey-light-1;
+    padding: 25rem 0;
+    margin-top: -20vh;
+
+    @include responsive(tab-port) {
+        padding: 20rem 0;
+    }
+}
+
+.section-solutions {
+    padding: 20rem 0;
+    background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.8)),
+        url("../img/nature-background.webp");
+    background-size: cover;
+    background-position: top;
+    transform: skewY(-7deg);
+    margin-top: -10.5rem;
+
+    &>* {
+        transform: skewY(7deg);
+    }
+
+    @include responsive(tab-port) {
+        padding: 10rem 0;
+    }
+}
+
+.features-box {
+    padding: 0 7rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 7rem;
+    place-content: center;
+    margin: 8rem 0 5rem 0;
+
+    @include responsive(tab-land) {
+        padding: 5rem;
+    }
+
+    @include responsive(phone) {
+        padding: 3rem;
+    }
+}
+
+.section-devs {
+    background-color: $color-grey-light-1;
+    padding: 25rem 0 15rem 0;
+    margin-top: -10.5rem;
+
+    @include responsive(tab-port) {
+        padding: 20rem 0;
+    }
+}
