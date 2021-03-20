@@ -17,16 +17,40 @@
   </head>
 
   <body>
+    <div class="navigation">
+      <input type="checkbox" class="navigation__checkbox" id="nav-toggle" />
+      <label for="nav-toggle" class="navigation__button">
+        <span class="navigation__icon">&nbsp;</span>
+      </label>
+      <nav class="navigation__nav">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a href="#" class="navigation__link">Accueil</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#section-about" class="navigation__link">A propos</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#section-solutions" class="navigation__link"
+              >Bonnes pratiques</a
+            >
+          </li>
+          <li class="navigation__item">
+            <a href="#section-devs" class="navigation__link">Spécial Dev</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
     <header class="header">
       <div class="header__logo-box">
         <svg class="header__logo">
           <use xlink:href="img/penguin.svg#icon-penguin"></use>
         </svg>
-        <span class="header__text">Penguins Lives Matter</span>
+        <span class="header__text" lang="en">Penguins Lives Matter</span>
       </div>
       <div class="header__text-box u-margin-bottom-small u-margin-top-big">
         <h1 class="heading-primary">
-          <span class="heading-primary--main">Green It</span>
+          <span class="heading-primary--main" lang="en">Green It</span>
           <span class="heading-primary--sub">agissons tous ensemble!</span>
         </h1>
         <a href="#section-about" class="btn btn--white btn--animated"
@@ -40,6 +64,27 @@
           <h2 class="heading-secondary">Vers un monde plus Green</h2>
         </div>
         <div class="row col">
+          <p class="paragraph">
+            On a tendance à l’oublier, mais chaque recherche Internet, chaque
+            mail envoyé ou reçu, chaque publicité sur un site web implique la
+            consommation d’électricité et donc, l’émission de gaz à effet de
+            serre!
+          </p>
+          <p class="paragraph">
+            Rien qu'une recherche sur Internet représente 3,4 Wh (0,8 g
+            d’équivalent CO2). Ce nombre atteint 10 g après une recherche via un
+            moteur qui aboutit à cinq résultats. Partant de l’estimation qu’un
+            internaute lambda effectue en moyenne 2,6 recherches sur Internet
+            par jour, on peut extrapoler qu’il émet 9,9 kg d’équivalent CO2 par
+            an.
+          </p>
+          <p class="paragraph">
+            Et quand on pense qu'à peine plus de 6 kg de CO2 suffisent à
+            euthanasier un pingouin, on ne peut que se demander comment faire
+            pour arrêter ce fléau écologique? stopper Internet? il y a peut-être
+            une alternative à cette solution: on pourrait agir tous ensemble, en
+            devenant tout un chacun éco-responsable?!
+          </p>
           <p class="paragraph">
             Chacun d'entre nous a un rôle à jouer et peut agir individuellement
             en se disciplinant et en appliquant un ensemble de bonnes pratiques,
@@ -189,10 +234,11 @@
       </section>
     </main>
     <footer class="footer">
-      <p class="footer__copyright u-center-text">
+      <p class="footer__copyright u-center-text" lang="en">
         Copyright &copy; Isabelle Hugues, built in an eco-responsible way in
         2021
       </p>
     </footer>
+    <script src="js/app.js"></script>
   </body>
 </html>
