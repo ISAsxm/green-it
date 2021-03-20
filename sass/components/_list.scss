@@ -23,19 +23,20 @@
         &::before {
             content: "";
             display: inline-block;
-            height: 1rem;
-            width: 1rem;
+            height: 1.2rem;
+            width: 1.2rem;
             margin-right: .2rem;
-            background-image: url(../img/chevron-thin-right.svg);
+            color: #55c57a;
+            background-image: url(../img/penguin.svg);
             background-size: cover;
             transition: all .2s;
 
             @supports (-webkit-mask-image: url()) or (mask-image: url()) {
                 background-color: $color-primary;
-                -webkit-mask-image: url(../img/chevron-thin-right.svg);
-                -webkit-mask-size: cover;
-                mask-image: url(../img/chevron-thin-right.svg);
-                mask-size: cover;
+                -webkit-mask-image: url(../img/penguin.svg);
+                -webkit-mask-size: contain;
+                mask-image: url(../img/penguin.svg);
+                mask-size: contain;
                 background-image: none;
             }
         }

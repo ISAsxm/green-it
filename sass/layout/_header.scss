@@ -3,11 +3,10 @@
     background-image: linear-gradient(to right bottom,
             rgba($color-primary-light, 0.8),
             rgba($color-primary-dark, 0.8)),
-        url(../img/mountain.webp);
+        url(../img/penguin-land.webp);
     background-size: cover;
-    background-position: top;
+    background-position: bottom;
     position: relative;
-
 
     @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
@@ -21,7 +20,7 @@
         background-image: linear-gradient(to right bottom,
                 rgba($color-primary-light, 0.8),
                 rgba($color-primary-dark, 0.8),
-                url(../img/mountain.webp));
+                url(../img/penguin-land.webp));
     }
 
     @include responsive(phone) {
@@ -32,7 +31,7 @@
     &__text {
         color: $color-white;
         font-size: 2rem;
-        margin-left: .6rem;
+        margin-left: .8rem;
     }
 
     &__logo-box {
@@ -41,13 +40,21 @@
         left: 4rem;
         display: flex;
         align-items: center;
+
+        &:hover>.header__logo {
+            transform: rotate(-180deg);
+        }
     }
 
     &__logo {
         display: inline-block;
         height: 3.5rem;
         width: 3.5rem;
+        paint-order: fill;
         fill: $color-white;
+        stroke: $color-white;
+        transition: all .2s;
+
     }
 
     &__text-box {
