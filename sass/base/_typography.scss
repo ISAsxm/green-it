@@ -59,6 +59,7 @@ body {
 
     @include responsive(tab-port) {
         font-size: 3rem;
+        margin-bottom: 2.5rem;
     }
 
     @include responsive(phone) {
